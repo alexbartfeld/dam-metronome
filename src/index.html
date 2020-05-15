@@ -4,13 +4,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
+  <script type="module" src="/build/dam-metronome.esm.js"></script>
+  <script nomodule src="/build/dam-metronome.js"></script>
+  <style>
+    #dam{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
-  <script type="module" src="/build/metronome.esm.js"></script>
-  <script nomodule src="/build/metronome.js"></script>
+    dam-metronome {
+      border: 2px solid #000030;
+      border-radius: 5px;
+      padding: 16px;
+    }
+  </style>
 </head>
 <body>
-
-<dam-metronome src="./assets/click.wav"></dam-metronome>
-
+<div id="dam">
+  <h1>dam-metronome demo page:</h1>
+  <hr/><br/>
+  <dam-metronome src="./assets/click.wav"></dam-metronome>
+</div>
 </body>
 </html>
