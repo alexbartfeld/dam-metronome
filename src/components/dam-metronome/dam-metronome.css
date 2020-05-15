@@ -52,6 +52,7 @@
   align-self: center;
   position: relative;
   left: 2px;
+  top: 1px;
   box-sizing: border-box;
   display: inline-block;
   width: var(--button-image-size);
@@ -62,6 +63,8 @@
 }
 
 #metronome__btn-stop {
+  position: relative;
+  top: 1px;
   align-self: center;
   box-sizing: border-box;
   display: inline-block;
