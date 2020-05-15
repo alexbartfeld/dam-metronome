@@ -15,8 +15,8 @@ npm i dam-metronome
 or by including it in your html with script tag
 
 ```html
- <script nomodule src=""></script>
- <script src=""></script>
+ <script nomodule src="https://unpkg.com/dam-metronome/dist/dam-metronome/dam-metronome.js"></script>
+ <script type="module" src="https://unpkg.com/dam-metronome/dist/dam-metronome/dam-metronome.esm.js"></script>
 ```
 
 ## Usage
