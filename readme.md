@@ -1,4 +1,4 @@
-![Dog Ate My](src/assets/dam-logo.jpg "Dog ate my Metronome")
+![Dog Ate My](https://raw.githubusercontent.com/alexbartfeld/dam-metronome/master/src/assets/dam-logo.jpg "Dog ate my Metronome")
 
 # dam-metronome
 
