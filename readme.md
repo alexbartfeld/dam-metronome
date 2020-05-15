@@ -2,7 +2,10 @@
 
 # dam-metronome
 
-dam-metronome is a custom element that was made with StencilJS and web audio api.  
+dam-metronome is a custom element that was made with StencilJS and web audio api.
+
+##Demo
+[Click here to see the metronome in action](https://dog-ate-my.web.app/)  
 
 ## Installation
 

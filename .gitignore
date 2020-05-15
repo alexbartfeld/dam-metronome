@@ -27,3 +27,5 @@ UserInterfaceState.xcuserstate
 
 src/components.d.ts
 components.json
+.firebaserc
+firebase.json
