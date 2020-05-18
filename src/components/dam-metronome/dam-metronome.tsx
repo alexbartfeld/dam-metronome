@@ -9,10 +9,14 @@ import {Sound} from "../../services/sound-bank";
     shadow: true
 })
 export class DamMetronome implements ComponentInterface {
+    private readonly _playerStart: Function = metroPlayer.start;
+    private readonly _playerStop: Function = metroPlayer.stop;
+
     @State() stressFirstNote: boolean = false;
     @State() subDiv: number = Subdivision.quarter;
     @State() input: number; // for fluid change of numbers in UI
     @State() isPlaying: boolean = false;
+    @State() currentSound: string = Sound.click; // All available sounds should be coming form Sound Bank sounds
 
     @Prop() src: string = '';
     @Prop() bpm: number = 120;
@@ -49,10 +53,10 @@ export class DamMetronome implements ComponentInterface {
     };
 
     private play(): void {
-        metroPlayer.start({
+        this._playerStart({
             bpm: this.bpm,
             stressNote: this.stressFirstNote,
-            sound: Sound.click,
+            sound: this.currentSound,
             src: this.src,
             subDiv: this.subDiv,
         });
@@ -60,7 +64,7 @@ export class DamMetronome implements ComponentInterface {
     }
 
     private stop(): void {
-        metroPlayer.stop();
+        this._playerStop();
         this.isPlaying = false;
     }
 

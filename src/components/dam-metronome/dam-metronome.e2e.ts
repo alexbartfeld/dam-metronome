@@ -1,16 +1,11 @@
 import {newE2EPage} from '@stencil/core/testing';
 
 describe('dam-metronome', () => {
-    let page, element;
+    let page;
 
     beforeEach(async () => {
         page = await newE2EPage();
         await page.setContent('<dam-metronome></dam-metronome>');
-        element = await page.find('dam-metronome');
-    });
-
-    it('renders', async () => {
-        expect(element).toHaveClass('hydrated');
     });
 
     it('should toggle stop to play button image when clicking play', async () => {
@@ -35,7 +30,7 @@ describe('dam-metronome', () => {
             .toEqualHtml('<span id="metronome__bpm-screen">140<span id="metronome__bpm">BPM</span></span>');
     });
 
-    it('it should add class active to checkbox (stress first beat) when clicked', async () => {
+    it('should add class - active - to checkbox (stress first beat) when label clicked', async () => {
         const stressCheckBox = await page.find('dam-metronome >>> #stress__checkbox');
         const label = await page.find('dam-metronome >>> #stress');
         expect(stressCheckBox.classList.contains('active')).toBeFalsy();
