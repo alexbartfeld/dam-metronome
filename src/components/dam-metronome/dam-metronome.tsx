@@ -38,6 +38,7 @@ export class DamMetronome implements ComponentInterface {
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleBpmChange = this.handleBpmChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.handleStressNoteChange = this.handleStressNoteChange.bind(this);
     }
 
     private handleParametersChange() {
@@ -83,6 +84,10 @@ export class DamMetronome implements ComponentInterface {
         this.subDiv = val;
     }
 
+    private handleStressNoteChange(e) {
+        this.stressFirstNote = (e.target as HTMLInputElement).checked;
+    }
+
     render() {
         const content = this.isPlaying ? <span id="metronome__btn-stop"/> : <span id="metronome__btn-play"/>;
 
@@ -100,12 +105,15 @@ export class DamMetronome implements ComponentInterface {
                        onChange={this.handleBpmChange}/>
 
                 <div class="flex-row--end margin-top">
-                    <label id="accent">
-                        <input id="accent__checkbox" onChange={(e) => {
-                            this.stressFirstNote = (e.target as HTMLInputElement).checked
-                        }} type="checkbox"/>
-                        <div id="accent__indicator"/>
-                        <div id="accent__text">
+                    <label id="stress">
+                        <input id="stress__checkbox"
+                               class={this.stressFirstNote ? 'active' : null}
+                               checked={this.stressFirstNote}
+                               type="checkbox"
+                               onChange={this.handleStressNoteChange}/>
+
+                        <div id="stress__indicator"/>
+                        <div id="stress__text">
                             <slot>Stress first beat</slot>
                         </div>
                     </label>
