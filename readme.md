@@ -4,7 +4,7 @@
 
 dam-metronome is a custom element that was made with StencilJS and web audio api.
 
-##Demo
+## Demo
 [Click here to see the metronome in action](https://dog-ate-my.web.app/)  
 
 ## Installation
@@ -30,6 +30,15 @@ or by including it in your html with script tag
 or
 ```html
 <dam-metronome src="./assets/click.wav"></dam-metronome>
+```
+
+If you'd like to change the colors of the component you can use css variables:
+
+```css
+:root {
+    --metronome-color-1: YOUR_COLOR; /* This will affect the whole component */
+    --metronome-color-2: YOUR_COLOR; /* This will affect the inside of the metronome controllers */
+}
 ```
 
 ## Contributing
