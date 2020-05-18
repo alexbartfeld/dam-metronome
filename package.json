@@ -1,6 +1,6 @@
 {
   "name": "dam-metronome",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Dog Ate My Metronome",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -38,5 +38,10 @@
     "metronome custom element",
     "metronome tag",
     "metronome"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbartfeld/dam-metronome.git"
+  },
+  "homepage": "https://github.com/alexbartfeld/dam-metronome#readme"
 }

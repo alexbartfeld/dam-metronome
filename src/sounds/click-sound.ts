@@ -1,4 +1,4 @@
-import {getAudioContext} from "./audio-context";
+import {getAudioContext} from "../services/audio-context";
 
 const clickSound = (when: number, frequency: number, gain?: number) => {
   const context = getAudioContext();
